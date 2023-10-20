@@ -37,8 +37,8 @@ public class PaginaCalculadoraPadrao extends JPanel {
 //            });
 //            frameBotoesCalculadora.add(botaoNumeroUm);
 //        }
-        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("%", displayConta));
-        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("", e -> {}));
+        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("(", displayConta));
+        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora(")", displayConta));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("C", e -> {displayConta.limpar();}));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("DEL", e -> {
             displayConta.apagarCaractere();
@@ -64,7 +64,7 @@ public class PaginaCalculadoraPadrao extends JPanel {
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("3", displayConta));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("+", displayConta));
 
-        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("", e -> {}));
+        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("%", displayConta));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("0", displayConta));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora(".", displayConta));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("=", e -> {
