@@ -1,4 +1,4 @@
-package com.luisbb.model.bordas;
+package com.luisbb.model.swing.bordas;
 
 import javax.swing.border.Border;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package com.luisbb.model.cores;
+package com.luisbb.model.swing.cores;
 
 import java.awt.*;
 

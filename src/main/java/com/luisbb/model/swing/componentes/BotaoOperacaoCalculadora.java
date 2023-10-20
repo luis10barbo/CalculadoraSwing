@@ -1,8 +1,6 @@
-package com.luisbb.model.componentes;
+package com.luisbb.model.swing.componentes;
 
-import com.luisbb.model.bordas.BordaArredondada;
-import com.luisbb.model.cores.CorNeutraClara;
-import com.luisbb.model.cores.CorNeutraClaraP;
+import com.luisbb.model.swing.cores.CorNeutraClaraP;
 
 import javax.swing.*;
 import java.awt.*;
