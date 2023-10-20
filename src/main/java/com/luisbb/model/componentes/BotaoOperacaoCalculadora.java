@@ -1,0 +1,59 @@
+package com.luisbb.model.componentes;
+
+import com.luisbb.model.bordas.BordaArredondada;
+import com.luisbb.model.cores.CorNeutraClara;
+import com.luisbb.model.cores.CorNeutraClaraP;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+public class BotaoOperacaoCalculadora extends JButton {
+    public interface EventoClique {
+        void aoClicar(MouseEvent e);
+    }
+
+    private void setupBotao(String texto) {
+        setText(texto);
+        setBorderPainted(false);
+        setFocusPainted(false);
+
+        setBackground(new CorNeutraClaraP());
+        setForeground(Color.WHITE);
+    }
+
+    public BotaoOperacaoCalculadora(String texto, DisplayConta displayConta) {
+        setupBotao(texto);
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                displayConta.setTexto(textoAnterior -> textoAnterior + texto);
+            }
+        });
+    }
+
+    public BotaoOperacaoCalculadora(String texto, EventoClique eventoClique) {
+        setupBotao(texto);
+
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                eventoClique.aoClicar(e);
+            }
+        });
+
+        setFont(new Font("Segoe UI", Font.PLAIN, 16));
+
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        super.paintComponent(g2d);
+        g2d.dispose();
+    }
+}
