@@ -38,7 +38,7 @@ public class PaginaCalculadoraPadrao extends JPanel {
 //            frameBotoesCalculadora.add(botaoNumeroUm);
 //        }
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("%", displayConta));
-        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("CE", e -> {}));
+        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("", e -> {}));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("C", e -> {displayConta.limpar();}));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("DEL", e -> {
             displayConta.apagarCaractere();
@@ -47,12 +47,12 @@ public class PaginaCalculadoraPadrao extends JPanel {
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("1/x", e -> {}));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("x^2", e -> {}));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("x^(1/2)", e -> {}));
-        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("%", e -> {}));
+        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("/", displayConta));
 
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("7", displayConta));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("8", displayConta));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("9", displayConta));
-        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("×", displayConta));
+        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("*", displayConta));
 
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("4", displayConta));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("5", displayConta));
@@ -64,9 +64,9 @@ public class PaginaCalculadoraPadrao extends JPanel {
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("3", displayConta));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("+", displayConta));
 
-        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("+/-", e -> {}));
+        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("", e -> {}));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("0", displayConta));
-        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora(",", displayConta));
+        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora(".", displayConta));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("=", e -> {
             displayConta.gerarCalculo();
         }));
