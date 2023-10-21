@@ -8,6 +8,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class BotaoOperacaoCalculadora extends JButton {
+    private static final int TAMANHO_FONTE = 20;
+    private static final int ESTILO_FONTE = Font.BOLD;
+
     public interface EventoClique {
         void aoClicar(MouseEvent e);
     }
@@ -30,6 +33,9 @@ public class BotaoOperacaoCalculadora extends JButton {
                 displayConta.setTexto(textoAnterior -> textoAnterior + texto);
             }
         });
+
+        setFont(new Font("Segoe UI", ESTILO_FONTE, TAMANHO_FONTE));
+
     }
 
     public BotaoOperacaoCalculadora(String texto, EventoClique eventoClique) {
@@ -43,7 +49,7 @@ public class BotaoOperacaoCalculadora extends JButton {
             }
         });
 
-        setFont(new Font("Segoe UI", Font.PLAIN, 16));
+        setFont(new Font("Segoe UI", ESTILO_FONTE, TAMANHO_FONTE));
 
     }
 

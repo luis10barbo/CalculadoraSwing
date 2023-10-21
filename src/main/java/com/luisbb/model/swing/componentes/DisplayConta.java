@@ -11,7 +11,7 @@ public class DisplayConta extends JPanel {
 
     public DisplayConta() {
         labelConta.setForeground(Color.WHITE);
-        labelConta.setFont(new Font("Sergoe UI", Font.BOLD, 24));
+        labelConta.setFont(new Font("Sergoe UI", Font.BOLD, 32));
         add(labelConta);
         setOpaque(false);
         setTexto(expressaoMatematica.getExpressao());
