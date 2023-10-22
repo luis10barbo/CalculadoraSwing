@@ -13,4 +13,9 @@ public class UtilsNumero {
             return false;
         }
     }
+
+    public static String arredondarSePossivel(double valor) {
+        return valor % 1 == 0 ? String.valueOf((int) valor) : String.valueOf(valor);
+    }
+
 }

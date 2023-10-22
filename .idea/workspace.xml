@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84456583-13c8-410c-ac06-14ad58112c8e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/controller/ExpressaoMatematicaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/componentes/BotaoOperacaoCalculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/componentes/BotaoOperacaoCalculadora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/model/ExpressaoMatematica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/model/ExpressaoMatematica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/componentes/DisplayConta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/componentes/DisplayConta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/utils/UtilsNumero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/utils/UtilsNumero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,15 +59,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "corretto-1.8",
-    "last_opened_file_path": "C:/Users/luis1/OneDrive/Documents/programacao/java/CalculadoraSwing"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/luis1/OneDrive/Documents/programacao/java/CalculadoraSwing&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.luisbb.Main" />
@@ -101,7 +104,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/luisbb/model/ExpressaoMatematica.java</url>
-          <line>68</line>
+          <line>28</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

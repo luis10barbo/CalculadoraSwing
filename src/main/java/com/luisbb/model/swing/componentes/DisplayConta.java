@@ -1,12 +1,13 @@
 package com.luisbb.model.swing.componentes;
 
+import com.luisbb.controller.ExpressaoMatematicaController;
 import com.luisbb.model.ExpressaoMatematica;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class DisplayConta extends JPanel {
-    private ExpressaoMatematica expressaoMatematica = new ExpressaoMatematica();
+    private final ExpressaoMatematicaController expressaoMatematica = new ExpressaoMatematicaController();
     private final JLabel labelConta = new JLabel();
 
     public DisplayConta() {
@@ -44,7 +45,6 @@ public class DisplayConta extends JPanel {
     }
 
     public void gerarCalculo() {
-
         labelConta.setText(expressaoMatematica.getExpressaoComResultado());
     }
 }
