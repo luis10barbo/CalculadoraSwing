@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ExpressaoMatematica {
-    private String expressao = "(50 + 5) * 2";
+    private String expressao = "";
 
     public void setExpressao(String expressao) {
         this.expressao = expressao.replace(" ", "");
