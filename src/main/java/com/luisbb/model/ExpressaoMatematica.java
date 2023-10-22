@@ -1,5 +1,6 @@
 package com.luisbb.model;
 
+import com.luisbb.model.calculos.ArgumentosCalculo;
 import com.luisbb.model.calculos.operacoes.OperacaoMatematica;
 import com.luisbb.utils.UtilsNumero;
 import org.jetbrains.annotations.NotNull;
@@ -27,7 +28,7 @@ public class ExpressaoMatematica {
     }
 
     public String getExpressaoComResultado() {
-        return expressao + "=" + (resultado != null ? resultado : "?") ;
+        return expressao + " = " + (resultado != null ? UtilsNumero.arredondarSePossivel(resultado) : "?") ;
     }
 
     public void setResultado(Double resultado) {

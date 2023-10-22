@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84456583-13c8-410c-ac06-14ad58112c8e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/controller/ExpressaoMatematicaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/model/ExpressaoMatematica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/model/ExpressaoMatematica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/componentes/DisplayConta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/componentes/DisplayConta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/utils/UtilsNumero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/utils/UtilsNumero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,16 +94,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/luisbb/model/ExpressaoMatematica.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
