@@ -46,7 +46,7 @@ public class PaginaCalculadoraPadrao extends JPanel {
 
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("1/x", e -> {}));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("x^2", e -> {}));
-        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("x^(1/2)", e -> {}));
+        frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("^", displayConta));
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("/", displayConta));
 
         frameBotoesCalculadora.add(new BotaoOperacaoCalculadora("7", displayConta));

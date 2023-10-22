@@ -37,6 +37,10 @@ public interface OperacaoMatematica {
         }
     }
 
+    static OperacaoMatematica getOperacaoE(String operador) {
+        if (operador.equals("^")) return new Exponencial();
+        return null;
+    }
 
     static OperacaoMatematica getOperacaoMD(String operador) {
         switch (operador) {

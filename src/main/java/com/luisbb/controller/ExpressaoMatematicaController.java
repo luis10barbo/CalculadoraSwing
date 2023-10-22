@@ -56,10 +56,10 @@ public class ExpressaoMatematicaController {
         ) {
             novaExpressao = novaExpressao.replace(expressaoParentese, arredondarSePossivel(calculoPEMDAS(new ExpressaoMatematica(expressaoParentese))));
         }
-
+        // Resolver Exponenciais
+        novaExpressao = resolverExpressao(novaExpressao, OperacaoMatematica::getOperacaoE);
         // Resolver Multiplicacoes e Divisoes
         novaExpressao = resolverExpressao(novaExpressao, OperacaoMatematica::getOperacaoMD);
-
         // Resolver Adições e Subtrações
         novaExpressao = resolverExpressao(novaExpressao, OperacaoMatematica::getOperacaoAS);
 
