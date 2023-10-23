@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84456583-13c8-410c-ac06-14ad58112c8e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/model/calculos/operacoes/Exponencial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/componentes/PainelBotoesCalculadora.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/controller/ExpressaoMatematicaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/controller/ExpressaoMatematicaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/model/calculos/operacoes/OperacaoMatematica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/model/calculos/operacoes/OperacaoMatematica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/componentes/BotaoOperacaoCalculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/componentes/BotaoOperacaoCalculadora.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/paginas/PaginaCalculadoraPadrao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/paginas/PaginaCalculadoraPadrao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luisbb/view/CalculadoraView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luisbb/view/CalculadoraView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,5 +97,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/componentes/PainelBotoesCalculadora.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/luisbb/model/swing/componentes/PainelBotoesCalculadora.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
