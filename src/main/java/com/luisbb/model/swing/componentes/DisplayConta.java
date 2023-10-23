@@ -9,11 +9,17 @@ import java.awt.*;
 public class DisplayConta extends JPanel {
     private final ExpressaoMatematicaController expressaoMatematica = new ExpressaoMatematicaController();
     private final JLabel labelConta = new JLabel();
+    private final JLabel labelHistorico = new JLabel();
 
     public DisplayConta() {
         labelConta.setForeground(Color.WHITE);
         labelConta.setFont(new Font("Sergoe UI", Font.BOLD, 32));
         add(labelConta);
+
+        labelHistorico.setForeground(Color.WHITE);
+        labelConta.setFont(new Font("Sergoe UI", Font.BOLD, 32));
+        add(labelHistorico);
+
         setOpaque(false);
         setTexto(expressaoMatematica.getExpressao());
     }
@@ -45,6 +51,6 @@ public class DisplayConta extends JPanel {
     }
 
     public void gerarCalculo() {
-        labelConta.setText(expressaoMatematica.getExpressaoComResultado());
+        setTexto(expressaoMatematica.getExpressaoComResultado());
     }
 }
