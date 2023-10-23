@@ -21,24 +21,24 @@ public class DisplayConta extends JPanel {
         add(labelHistorico);
 
         setOpaque(false);
-        setTexto(expressaoMatematica.getExpressao());
+        setTexto(expressaoMatematica.getExpressao(), false);
     }
     public interface TrocarTextoRunnable {
         String trocarTexto(String textoAnterior);
     }
     public void setTexto(TrocarTextoRunnable trocarTextoRunnable) {
-        setTexto(trocarTextoRunnable.trocarTexto(expressaoMatematica.getExpressao()));
+        setTexto(trocarTextoRunnable.trocarTexto(expressaoMatematica.getExpressao()), true);
     }
 
-    public void setTexto(String texto) {
-        this.expressaoMatematica.setExpressao(texto);
+    public void setTexto(String texto, boolean atualizarExpressao) {
+        if (atualizarExpressao) this.expressaoMatematica.setExpressao(texto);
         if (texto.length() > 0) labelConta.setText(texto);
         else labelConta.setText("0");
 
     }
 
     public void limpar() {
-        setTexto("");
+        setTexto("", true);
     }
 
     public void apagarCaractere() {
@@ -51,6 +51,6 @@ public class DisplayConta extends JPanel {
     }
 
     public void gerarCalculo() {
-        setTexto(expressaoMatematica.getExpressaoComResultado());
+        setTexto(expressaoMatematica.getExpressaoComResultado(), false);
     }
 }
