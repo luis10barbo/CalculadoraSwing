@@ -4,6 +4,7 @@ import com.luisbb.model.ExpressaoMatematica;
 import com.luisbb.model.calculos.operacoes.OperacaoMatematica;
 import com.luisbb.utils.UtilsNumero;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 import static com.luisbb.utils.UtilsNumero.arredondarSePossivel;
@@ -31,7 +32,13 @@ public class ExpressaoMatematicaController {
      */
     public void calcular() {
         expressaoMatematica.resetarOperacoesCalculo();
-        expressaoMatematica.setResultado(calculoPEMDAS(expressaoMatematica));
+
+        double res = calculoPEMDAS(expressaoMatematica);
+        expressaoMatematica.setResultado(res);
+
+        if (res == 2.147483647E9) JOptionPane.showMessageDialog(null, "Calculo alcancado limite de valor de Double!");
+
+
     }
 
     /**
