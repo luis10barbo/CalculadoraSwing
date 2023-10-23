@@ -33,10 +33,10 @@ public class ExpressaoMatematicaController {
     public void calcular() {
         expressaoMatematica.resetarOperacoesCalculo();
 
-        double res = calculoPEMDAS(expressaoMatematica);
+        Double res = calculoPEMDAS(expressaoMatematica);
         expressaoMatematica.setResultado(res);
 
-        if (res == 2.147483647E9) JOptionPane.showMessageDialog(null, "Calculo alcancado limite de valor de Double!");
+        if (res!= null && res == 2.147483647E9) JOptionPane.showMessageDialog(null, "Calculo alcancado limite de valor de Double!");
 
 
     }
@@ -51,6 +51,8 @@ public class ExpressaoMatematicaController {
         String novaExpressao = expressao.getExpressao().replace(" ", "");
         Double res = null;
 
+        if (novaExpressao.length() < 1) return null;
+
         // Retirar parenteses que envolvem operacao
         while (novaExpressao.charAt(0) == '(' && novaExpressao.charAt(novaExpressao.length() - 1) == ')') {
             if (novaExpressao.length() == 2) novaExpressao = "";
@@ -61,7 +63,10 @@ public class ExpressaoMatematicaController {
         String[] parenteses = parseParenteses(novaExpressao);
         for (String expressaoParentese: parenteses
         ) {
-            novaExpressao = novaExpressao.replace(expressaoParentese, arredondarSePossivel(calculoPEMDAS(new ExpressaoMatematica(expressaoParentese))));
+            Double resParentese = calculoPEMDAS(new ExpressaoMatematica(expressaoParentese));
+            if (resParentese == null) continue;
+
+            novaExpressao = novaExpressao.replace(expressaoParentese, arredondarSePossivel(resParentese));
         }
         // Resolver Exponenciais
         novaExpressao = resolverExpressao(novaExpressao, OperacaoMatematica::getOperacaoE);
