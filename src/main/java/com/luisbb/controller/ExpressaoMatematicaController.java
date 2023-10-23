@@ -56,8 +56,11 @@ public class ExpressaoMatematicaController {
         // Retirar parenteses que envolvem operacao
         while (novaExpressao.charAt(0) == '(' && novaExpressao.charAt(novaExpressao.length() - 1) == ')') {
             if (novaExpressao.length() == 2) novaExpressao = "";
-            else novaExpressao = novaExpressao.substring(1, novaExpressao.length() - 1);
+            else {
+                novaExpressao = novaExpressao.substring(1, novaExpressao.length() - 1);
+            }
         }
+        expressaoMatematica.appendOperacaoCalculo(novaExpressao);
 
         // Resolver expressoes dentro de parenteses
         String[] parenteses = parseParenteses(novaExpressao);
@@ -66,7 +69,9 @@ public class ExpressaoMatematicaController {
             Double resParentese = calculoPEMDAS(new ExpressaoMatematica(expressaoParentese));
             if (resParentese == null) continue;
 
+            String antigaExpressao = novaExpressao;
             novaExpressao = novaExpressao.replace(expressaoParentese, arredondarSePossivel(resParentese));
+            expressaoMatematica.appendOperacaoCalculo(antigaExpressao + " >> " + novaExpressao);
         }
         // Resolver Exponenciais
         novaExpressao = resolverExpressao(novaExpressao, OperacaoMatematica::getOperacaoE);
@@ -184,6 +189,10 @@ public class ExpressaoMatematicaController {
     public String getExpressaoComResultado() {
         calcular();
         return expressaoMatematica.getExpressaoComResultado();
+    }
+
+    public String[] getOperacoesCalculo() {
+        return expressaoMatematica.getOperacoesCalculo();
     }
 
     public void setExpressao(String expressao) {

@@ -12,6 +12,8 @@ public class DisplayConta extends JPanel {
     private final JLabel labelHistorico = new JLabel();
 
     public DisplayConta() {
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+
         labelConta.setForeground(Color.WHITE);
         labelConta.setFont(new Font("Sergoe UI", Font.BOLD, 32));
         add(labelConta);
@@ -52,5 +54,14 @@ public class DisplayConta extends JPanel {
 
     public void gerarCalculo() {
         setTexto(expressaoMatematica.getExpressaoComResultado(), false);
+
+        String[] operacoesCalculo = expressaoMatematica.getOperacoesCalculo();
+        StringBuilder texto = new StringBuilder();
+        for (int i = 1; i < operacoesCalculo.length; i++) {
+            if (i != 1) texto.append("<br>");
+            texto.append(i).append(". ").append(operacoesCalculo[i]);
+        }
+
+        labelHistorico.setText("<html>" + texto);
     }
 }
