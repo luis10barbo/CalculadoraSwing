@@ -1,4 +1,4 @@
-package com.luisbb.model.swing.componentes;
+package com.luisbb.view.swing.componentes;
 
 import com.luisbb.controller.ExpressaoMatematicaController;
 import com.luisbb.model.ExpressaoMatematica;

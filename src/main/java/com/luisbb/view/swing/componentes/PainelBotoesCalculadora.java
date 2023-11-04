@@ -1,11 +1,11 @@
-package com.luisbb.model.swing.componentes;
+package com.luisbb.view.swing.componentes;
+
+import com.luisbb.view.swing.eventos.EventoEscreverCalculadora;
+import com.luisbb.view.swing.paginas.PaginaCalculadoraPadrao;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.HashMap;
-
-import static com.luisbb.model.swing.paginas.PaginaCalculadoraPadrao.ESPACO_PEQUENO;
 
 public class PainelBotoesCalculadora extends JPanel {
     HashMap<String, BotaoOperacaoCalculadora> botoes = new HashMap<>();
@@ -13,24 +13,26 @@ public class PainelBotoesCalculadora extends JPanel {
         setOpaque(false);
 
         GridLayout layout = new GridLayout(0, 4);
-        layout.setHgap(ESPACO_PEQUENO);
-        layout.setVgap(ESPACO_PEQUENO);
+        layout.setHgap(PaginaCalculadoraPadrao.ESPACO_PEQUENO);
+        layout.setVgap(PaginaCalculadoraPadrao.ESPACO_PEQUENO);
 
         setLayout(layout);
         setupBotoes(displayConta);
+        setFocusable(true);
+        addKeyListener(new EventoEscreverCalculadora(this));
     }
 
     public void setupBotoes(DisplayConta displayConta) {
         adicionarBotao("(", displayConta);
         adicionarBotao(")", displayConta);
         adicionarBotao("C", e -> {
-            displayConta.limpar();});
+            displayConta.limpar();}, new String[] {"c"});
         adicionarBotao("DEL", e -> {
             displayConta.apagarCaractere();
-        });
+        }, new String[]{"DEL"});
 
-        adicionarBotao("1/x", e -> {});
-        adicionarBotao("x^2", e -> {});
+        adicionarBotao("", e -> {});
+        adicionarBotao("", e -> {});
         adicionarBotao("^", displayConta);
         adicionarBotao("/", displayConta);
 
@@ -67,6 +69,12 @@ public class PainelBotoesCalculadora extends JPanel {
         BotaoOperacaoCalculadora botao = new BotaoOperacaoCalculadora(texto, eventoClique);
         add(botao);
         botoes.put(texto, botao);
+    }
+
+    private void adicionarBotao(String texto, BotaoOperacaoCalculadora.EventoClique eventoClique, String[] aliases) {
+        BotaoOperacaoCalculadora botao = new BotaoOperacaoCalculadora(texto, eventoClique);
+        add(botao);
+        for (String alias: aliases) botoes.put(alias, botao);
     }
 
     public void pressionarBotao(String textoBotao) {

@@ -1,8 +1,8 @@
-package com.luisbb.model.swing.paginas;
+package com.luisbb.view.swing.paginas;
 
-import com.luisbb.model.swing.componentes.PainelBotoesCalculadora;
-import com.luisbb.model.swing.componentes.DisplayConta;
-import com.luisbb.model.swing.cores.CorNeutra;
+import com.luisbb.view.swing.componentes.PainelBotoesCalculadora;
+import com.luisbb.view.swing.componentes.DisplayConta;
+import com.luisbb.view.swing.cores.CorNeutra;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

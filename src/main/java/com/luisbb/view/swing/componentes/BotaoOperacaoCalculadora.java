@@ -1,6 +1,6 @@
-package com.luisbb.model.swing.componentes;
+package com.luisbb.view.swing.componentes;
 
-import com.luisbb.model.swing.cores.CorNeutraClaraP;
+import com.luisbb.view.swing.cores.CorNeutraClaraP;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
